@@ -1,0 +1,32 @@
+﻿@using WebApi;
+@model List<Product>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Product Info</h2>
+
+<table class="table table-bordered table-hover" style="margin-top:50px">
+    <tr>
+        <th>ID</th>
+        <th>Ürün Adı</th>
+        <th>Fiyatı</th>
+        <th>Birim</th>
+        <th>Stok Miktarı</th>
+    </tr>
+    
+
+    @foreach (Product item in Model)
+    {
+    <tr>
+        <td>@item.id</td>
+        <td>@item.name</td>
+        <td>@item.unitPrice</td>
+        <td>@item.quantityPerUnit</td>
+        <td>@item.unitsInStock</td>
+        
+    </tr>
+    }
+    
+</table>
